@@ -36,8 +36,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ steps.vars.outputs.sha8 }}
-          release_name: CV (version ${{ steps.vars.outputs.date }})
+          tag_name: ${{ steps.date.outputs.date }}-${{ steps.vars.outputs.sha8 }}
+          release_name: CV (version ${{ steps.date.outputs.date }})
           draft: false
           prerelease: false
 
