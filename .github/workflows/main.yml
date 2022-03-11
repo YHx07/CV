@@ -40,6 +40,7 @@ jobs:
           release_name: Release ${{ github.ref }}
           draft: false
           prerelease: false
+          tag: ver-${{ github.sha }}
 
       - name: Upload Release Asset
         id: upload-release-asset 
