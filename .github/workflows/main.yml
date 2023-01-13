@@ -17,9 +17,9 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: main.tex
-        env:
-          TEXINPUTS: ".:./resume.cls//:"
+          root_file: |
+            main.tex
+            resume.cls
       - name: Declare variables
         id: vars
         shell: bash
